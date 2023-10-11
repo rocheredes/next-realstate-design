@@ -35,7 +35,7 @@ module.exports = {
         'heading1-semibold': [
           '60px',
           {
-            lineHeight: '65',
+            // lineHeight: '65',
             fontWeight: '600'
           }
         ],
@@ -43,7 +43,7 @@ module.exports = {
         'heading2-semibold': [
           '40px',
           {
-            lineHeight: '47',
+            // lineHeight: '47',
             fontWeight: '600'
           }
         ],
@@ -51,7 +51,7 @@ module.exports = {
         'heading2-medium': [
           '40px',
           {
-            lineHeight: '47',
+            // lineHeight: '47',
             fontWeight: '500'
           }
         ],
@@ -99,7 +99,7 @@ module.exports = {
         'regular-text': [
           '16px',
           {
-            lineHeight: '26',
+            lineHeight: '1.5',
             fontWeight: '400'
           }
         ],
@@ -107,7 +107,7 @@ module.exports = {
         'small-text': [
           '14px',
           {
-            lineHeight: '22',
+            lineHeight: '165.414%',
             fontWeight: '400'
           }
         ],
