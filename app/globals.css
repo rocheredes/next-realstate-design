@@ -6,4 +6,8 @@
     .topbar {
         @apply flex w-full items-center justify-between px-6 py-3;
     }
+
+    .main-swipper-arrow {
+        @apply flex justify-center items-center w-10 h-10 bg-white rounded-full
+    }
 }
