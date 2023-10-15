@@ -11,3 +11,22 @@
         @apply flex justify-center items-center w-10 h-10 bg-white rounded-full
     }
 }
+
+/* Shadcn Component Styles */
+
+
+.search-form_container {
+    @apply bg-white 
+}
+
+.search-form_radio-buttons{
+    @apply text-dark-3 cursor-pointer peer-data-[state=checked]:border-primary-500 peer-data-[state=checked]:font-semibold peer-data-[state=checked]:border-b peer-data-[state=checked]:text-primary-500 [&:has([data-state=checked])]:border-primary-500 [&:has([data-state=checked])]:border-b [&:has([data-state=checked])]:text-primary-500 [&:has([data-state=checked])]:font-semibold
+}
+
+.search-form_input {
+    @apply bg-light-2 bg-opacity-20 rounded-[20px] px-5 w-full h-14 !text-regular-text !text-light-1
+}
+
+.no-focus {
+    @apply focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-0 !important;
+}
