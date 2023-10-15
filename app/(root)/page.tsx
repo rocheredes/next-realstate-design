@@ -1,3 +1,4 @@
+import SearchForm from '@/components/forms/SearchForm'
 import MainSlider from '@/components/sliders/MainSlider'
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline'
 
@@ -27,8 +28,11 @@ export default function Home() {
               background: 'linear-gradient(180deg, rgba(67, 97, 238, 1) 0%, rgba(67, 97, 238, 0.00) 100%)'
             }} />
 
-
             <MainSlider />
+
+            <div className='mt-10'>
+              <SearchForm />
+            </div>
           </div>
 
 
