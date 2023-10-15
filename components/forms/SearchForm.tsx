@@ -17,20 +17,26 @@ const SearchForm = () => {
     defaultValues: {
       city: '',
       propertyType: '',
-      rooms: ''
+      rooms: '',
+      propertySearch: 'for-sale',
     }
   })
   return (
     <section className='search-form_container shadow-lg rounded-[20px]'>
       <Form {...form}>
-        <form>
+        {/* Todo: Fix de onSubmit SearchForm */}
+        <form >
 
           <div className='border-b'>
-            <RadioGroup defaultValue="card" className="flex flex-row px-5">
+            <RadioGroup defaultValue="for-sale" className="flex flex-row px-5">
               <div className='flex-1'>
-                <RadioGroupItem value="card" id="card" className="peer sr-only" />
+                <RadioGroupItem
+                  value="for-sale"
+                  id="for-sale"
+                  className="peer sr-only"
+                />
                 <Label
-                  htmlFor="card"
+                  htmlFor="for-sale"
                   className="flex flex-col items-center text-buttons-text leading-6 py-4 search-form_radio-buttons"
                 >
                   For Sale
@@ -38,12 +44,12 @@ const SearchForm = () => {
               </div>
               <div className='flex-1'>
                 <RadioGroupItem
-                  value="paypal"
-                  id="paypal"
+                  value="for-rent"
+                  id="for-rent"
                   className="peer sr-only"
                 />
                 <Label
-                  htmlFor="paypal"
+                  htmlFor="for-rent"
                   className="flex flex-col items-center text-buttons-text leading-6 py-4 search-form_radio-buttons"
                 >
                   For Rent
