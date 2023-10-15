@@ -1,6 +1,9 @@
 import SearchForm from '@/components/forms/SearchForm'
+import CompanyCarrousel from '@/components/sliders/CompanyCarrousel'
 import MainSlider from '@/components/sliders/MainSlider'
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline'
+import { Avatar, AvatarImage } from '@/components/ui/avatar'
+import { userGroupsImages } from '../../constant'
+import { PlusIcon } from '@heroicons/react/24/outline'
 
 export default function Home() {
   return (
@@ -34,13 +37,57 @@ export default function Home() {
               <SearchForm />
             </div>
           </div>
+        </div>
+      </section>
 
-
+      <section className='flex flex-col mt-10 px-6 py-3'>
+        <div>
+          <p className='text-dark-3 text-buttons-text text-center px-16 leading-normal'>Trusted by 100+ Companies across the globe! </p>
         </div>
 
+        <div>
+          {/* Todo: Make a Company carosell */}
+          <CompanyCarrousel />
+        </div>
 
+        <section className='users-group  mt-10 mb-10 '>
+          <div className='users-group_container rounded-full  border-2  '>
+            <div className='flex justify-start -space-x-1.5'>
+              {
+                userGroupsImages.map(({ url, alt }, index) => (
+
+                  <Avatar key={url} className='w-8 h-8 ring-2 ring-white'>
+                    <AvatarImage
+                      className="object-cover object-top ring-2 ring-white" loading="lazy"
+                      src={url}
+                      alt={alt}
+                    />
+
+                    {
+                      index === userGroupsImages.length - 1 && (
+                        <div className='overlay' >
+                          <PlusIcon className='w-4 h-4 font-bold stroke-[3]' />
+                        </div>
+                      )
+                    }
+                  </Avatar>
+
+
+                ))
+              }
+
+            </div>
+
+            <p className='text-buttons-text text-dark-2 leading-normal'>72k+ Happy Customers</p>
+          </div>
+          {/* <dd class="flex justify-end sm:justify-start lg:justify-end xl:justify-start -space-x-1.5">
+            <img: src="user.avatar" :alt="user.name" class="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white" loading="lazy">
+          </dd> */}
+        </section>
 
       </section>
+
+
     </>
   )
 }
