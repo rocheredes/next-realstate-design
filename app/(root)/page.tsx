@@ -1,6 +1,7 @@
 import SearchForm from '@/components/forms/SearchForm'
 import CompanyCarrousel from '@/components/sliders/CompanyCarrousel'
 import MainSlider from '@/components/sliders/MainSlider'
+import Image from 'next/image'
 import { Avatar, AvatarImage } from '@/components/ui/avatar'
 import { userGroupsImages } from '../../constant'
 import { PlusIcon } from '@heroicons/react/24/outline'
@@ -50,7 +51,7 @@ export default function Home() {
           <CompanyCarrousel />
         </div>
 
-        <section className='users-group  mt-10 mb-10 '>
+        <div className='users-group  mt-10 mb-10 '>
           <div className='users-group_container rounded-full  border-2  '>
             <div className='flex justify-start -space-x-1.5'>
               {
@@ -80,10 +81,25 @@ export default function Home() {
 
             <p className='text-buttons-text text-dark-2 leading-normal'>72k+ Happy Customers</p>
           </div>
-          {/* <dd class="flex justify-end sm:justify-start lg:justify-end xl:justify-start -space-x-1.5">
-            <img: src="user.avatar" :alt="user.name" class="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white" loading="lazy">
-          </dd> */}
-        </section>
+
+          <div className='users-group_container rounded-full border-2 mt-5 '>
+
+            <Image
+              src={'/images/3c1780f6158b1d62f2036152ec7a594f.jpg'}
+              alt='house-image'
+              width={60}
+              height={60}
+              className='self-stretch object-cover !w-14 h-14 p-0.5 rounded-full border-2 border-white'
+              loading='lazy'
+            />
+
+
+            <p className='text-buttons-text text-dark-2 leading-normal'>
+              200+ New Listings Everyday!
+            </p>
+          </div>
+
+        </div>
 
       </section>
 
