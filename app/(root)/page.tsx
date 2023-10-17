@@ -46,7 +46,7 @@ export default function Home() {
           <p className='text-dark-3 text-buttons-text text-center px-16 leading-normal'>Trusted by 100+ Companies across the globe! </p>
         </div>
 
-        <div>
+        <div className='mt-8'>
           {/* Todo: Make a Company carosell */}
           <CompanyCarrousel />
         </div>
