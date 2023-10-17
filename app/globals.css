@@ -14,6 +14,11 @@
     .users-group_container {
         @apply flex flex-row justify-center items-center gap-5 p-7 border-white shadow-xl
     }
+
+    .infoicons_container {
+        @apply flex justify-between items-center gap-3 bg-white
+    }
+
     .overlay {
         @apply flex justify-center items-center absolute bg-black opacity-70 inset-0 text-white
     }
