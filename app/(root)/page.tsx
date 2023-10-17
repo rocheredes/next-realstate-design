@@ -3,8 +3,10 @@ import CompanyCarrousel from '@/components/sliders/CompanyCarrousel'
 import MainSlider from '@/components/sliders/MainSlider'
 import Image from 'next/image'
 import { Avatar, AvatarImage } from '@/components/ui/avatar'
-import { userGroupsImages } from '../../constant'
+import { categories, userGroupsImages } from '../../constant'
 import { PlusIcon } from '@heroicons/react/24/outline'
+import ListedProperties from '@/components/card/ListedProperties'
+import { Button } from '@/components/ui/button'
 
 export default function Home() {
   return (
@@ -51,7 +53,7 @@ export default function Home() {
           <CompanyCarrousel />
         </div>
 
-        <div className='users-group  mt-10 mb-10 '>
+        <div className='users-group  mt-10 '>
           <div className='users-group_container rounded-full  border-2  '>
             <div className='flex justify-start -space-x-1.5'>
               {
@@ -97,6 +99,110 @@ export default function Home() {
             <p className='text-buttons-text text-dark-2 leading-normal'>
               200+ New Listings Everyday!
             </p>
+          </div>
+
+        </div>
+
+
+        <div className='who-we-are mt-16'>
+          <div className='info'>
+            <h1 className='text-secondary-500 text-base'>WHO ARE WE</h1>
+            <h1 className='text-3xl font-semibold mt-3'>Assisting individuals in locating the appropriate real estate.</h1>
+            <p className='text-dark-3 text-small-text mt-4'>Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. Nulla convallis ipsum molestie nibh malesuada, ac malesuada leo volutpat.</p>
+
+          </div>
+
+          <div className='images flex gap-4 mt-16 '>
+            <div className='relative w-44 h-64 rounded-2xl overflow-hidden'>
+              <Image
+                fill
+                src='/images/3c1780f6158b1d62f2036152ec7a594f.jpg'
+                className='object-cover'
+                alt='image01'
+
+              />
+            </div>
+            <div className='flex flex-col gap-4 -mt-8'>
+              <div className='relative w-36 h-36 rounded-2xl overflow-hidden'>
+                <Image
+                  fill
+                  src='/images/8d9d904d15616c6b35ab1d67adea9e75.jpg'
+                  className='object-cover'
+                  alt='image01'
+
+                />
+              </div>
+
+              <div className='relative w-36 h-24 rounded-2xl overflow-hidden'>
+                <Image
+                  fill
+                  src='/images/8363fc4f62fd9a46cc28eb202059adff.jpg'
+                  className='object-cover'
+                  alt='image01'
+
+                />
+              </div>
+            </div>
+          </div>
+
+
+          <div className='infoicons mt-10'>
+            <div className='infoicons_container  p-7 shadow-md rounded-3xl'>
+              <Image
+                src='/images/who-we-are/icon_smart_home_.svg'
+                width={34}
+                height={34}
+                alt='smart_home'
+                className='shrink-0'
+              />
+
+              <div>
+                <h1 className='text-buttons-text text-secondary-500'>Donec porttitor euismod</h1>
+                <p className="mt-2 text-dark-3 text-small-text leading-normal">Nullam a lacinia ipsum, nec dignissim purus. Nulla</p>
+              </div>
+            </div>
+
+            <div className='infoicons_container p-7 mt-10 shadow-md rounded-3xl'>
+              <Image
+                src='/images/who-we-are/icon_user_octagon_.svg'
+                width={34}
+                height={34}
+                alt='smart_home'
+                className='shrink-0'
+              />
+
+              <div>
+                <h1 className='text-buttons-text text-secondary-500'>Donec porttitor euismod</h1>
+                <p className="mt-2 text-dark-3 text-small-text leading-normal">Nullam a lacinia ipsum, nec dignissim purus. Nulla</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div className='our-news mt-16'>
+          <div className='info'>
+            <h1 className='text-secondary-500 text-base'>CHECKOUT OUR NEW</h1>
+            <h1 className='text-3xl font-semibold mt-3'>Latest Listed Properties.</h1>
+            <p className='text-dark-3 text-small-text mt-4'>Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.</p>
+
+          </div>
+
+          <div className='mt-4'>
+            <div className='flex gap-2 py-6'>
+              {
+                categories.map((cat, index) => (
+                  <Button
+                    key={cat.name}
+                    className={`py-5 px-8 rounded-full text-buttons-text   ${index === 1 ? 'bg-primary-500 text-white hover:bg-primary-500' : 'text-primary-500 border border-primary-500 bg-white hover:bg-white'}`}
+                  >
+                    {cat.name}
+                  </Button>
+                ))
+              }
+            </div>
+
+            <ListedProperties />
           </div>
 
         </div>
