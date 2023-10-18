@@ -3,10 +3,11 @@ import CompanyCarrousel from '@/components/sliders/CompanyCarrousel'
 import MainSlider from '@/components/sliders/MainSlider'
 import Image from 'next/image'
 import { Avatar, AvatarImage } from '@/components/ui/avatar'
-import { categories, userGroupsImages } from '../../constant'
+import { categories, properties, userGroupsImages } from '../../constant'
 import { PlusIcon } from '@heroicons/react/24/outline'
 import ListedProperties from '@/components/card/ListedProperties'
 import { Button } from '@/components/ui/button'
+import { Properties } from '../interface/properties'
 
 export default function Home() {
   return (
@@ -194,7 +195,7 @@ export default function Home() {
                 categories.map((cat, index) => (
                   <Button
                     key={cat.name}
-                    className={`py-5 px-8 rounded-full text-buttons-text   ${index === 1 ? 'bg-primary-500 text-white hover:bg-primary-500' : 'text-primary-500 border border-primary-500 bg-white hover:bg-white'}`}
+                    className={`py-5 px-8 rounded-full text-buttons-text   ${index === 1 ? 'bg-primary-500 text-white hover:bg-violet-950' : 'text-primary-500 border border-primary-500 bg-white hover:bg-white'}`}
                   >
                     {cat.name}
                   </Button>
@@ -202,7 +203,27 @@ export default function Home() {
               }
             </div>
 
-            <ListedProperties />
+            {
+              properties.map((prope) => (
+                <ListedProperties
+                  key={prope.url}
+                  url={prope.url}
+                  category={prope.category}
+                  price={prope.price}
+                  title={prope.title}
+                  description={prope.description}
+                  beds={prope.beds}
+                  baths={prope.baths}
+                  iconCategory={prope.iconCategory}
+                  iconColorText={prope.iconColorText}
+                  iconColorBg={prope.iconColorBg}
+                />
+              ))
+            }
+
+            <div className='flex justify-center mt-10'>
+              <Button variant={'outline'} className=' text-primary-500 hover:text-primary-500 border-primary-500 rounded-full py-5 px-7' > View more properties </Button>
+            </div>
           </div>
 
         </div>
