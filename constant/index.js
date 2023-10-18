@@ -13,7 +13,7 @@ export const userGroupsImages = [
     { url: '/images/users/user3.jpg', alt: 'user3' },
     { url: '/images/users/user4.jpg', alt: 'user4' },
     { url: '/images/users/user5.jpg', alt: 'user5' },
-    { url: '/images/users/user5.jpg', alt: 'user5' },
+    { url: '/images/users/user6.jpg', alt: 'user6' },
 ]
 
 export const categories = [
@@ -32,7 +32,11 @@ export const properties = [
         description: '103 Wright CourtBurien, WA 98168',
         beds: 4,
         baths: 3,
-        iconCategory: '/images/icons/icon_fire_.svg'
+        iconCategory: '/images/icons/icon_fire_.svg',
+        iconColorText: '#FF1111',
+        iconColorBg: '#FFE1E1'
+
+
     },
 
     {
@@ -43,7 +47,10 @@ export const properties = [
         description: '1964 Jehovah Drive, VA 22408',
         beds: 3,
         baths: 2,
-        iconCategory: '/images/icons/icon_home_.svg'
+        iconCategory: '/images/icons/icon_home_.svg',
+        iconColorText: '#119BFF',
+        iconColorBg: '#D7EEFF'
+
     },
 
     {
@@ -54,7 +61,11 @@ export const properties = [
         description: '1508 Centennial Farm RoadHarlan, 51537',
         beds: 4,
         baths: 4,
-        iconCategory: 'images/icons/icon_money.svg'
+        iconCategory: 'images/icons/icon_money.svg',
+        iconColorText: '#00CE3A',
+        iconColorBg: '#F1FFF1'
+
+
     },
 
     {
@@ -65,7 +76,9 @@ export const properties = [
         description: '103 Wright CourtBurien, WA 98168',
         beds: 4,
         baths: 3,
-        iconCategory: 3
+        iconCategory: null,
+        iconColorText: null,
+        iconColorBg: null
     },
 
 
