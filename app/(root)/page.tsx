@@ -4,10 +4,12 @@ import MainSlider from '@/components/sliders/MainSlider'
 import Image from 'next/image'
 import { Avatar, AvatarImage } from '@/components/ui/avatar'
 import { categories, properties, userGroupsImages } from '../../constant'
-import { PlusIcon } from '@heroicons/react/24/outline'
+import { PlusIcon, MagnifyingGlassIcon, HomeIcon } from '@heroicons/react/24/outline'
 import ListedProperties from '@/components/card/ListedProperties'
 import { Button } from '@/components/ui/button'
 import { Properties } from '../interface/properties'
+import OurServiceCard from '@/components/card/OurServiceCard'
+import { BedIcon } from 'lucide-react'
 
 export default function Home() {
   return (
@@ -181,7 +183,7 @@ export default function Home() {
 
         </div>
 
-        <div className='our-news mt-16'>
+        <div className='our-news mt-16 mb-16'>
           <div className='info'>
             <h1 className='text-secondary-500 text-base'>CHECKOUT OUR NEW</h1>
             <h1 className='text-3xl font-semibold mt-3'>Latest Listed Properties.</h1>
@@ -221,13 +223,43 @@ export default function Home() {
               ))
             }
 
-            <div className='flex justify-center mt-10'>
+            <div className='flex justify-center mt-14'>
               <Button variant={'outline'} className=' text-primary-500 hover:text-primary-500 border-primary-500 rounded-full py-5 px-7' > View more properties </Button>
             </div>
           </div>
 
         </div>
 
+
+
+      </section>
+
+      <section className='our-services bg-light-2 bg-opacity-30 py-28 px-6'>
+        <div>
+          <h1 className='text-dark-2 text-center text-base tracking-widest'>OUR SERVICES</h1>
+          <h3 className='text-dark-1 text-center text-heading3-semibold leading-normal mt-5' >Donec porttitor euismod dignissim</h3>
+        </div>
+
+        <div className='mt-10'>
+          <OurServiceCard
+            title="Buy a New Home"
+            description='Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. '
+            icon={<MagnifyingGlassIcon className='w-6 h-6 text-white' />}
+          />
+
+          <OurServiceCard
+            title="Sell a House"
+            description='Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. '
+            icon={<HomeIcon className='w-6 h-6 text-white' />}
+          />
+
+          <OurServiceCard
+            title="Buy a New Home"
+            description='Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. '
+            icon={<BedIcon className='w-6 h-6 text-white' />}
+          />
+
+        </div>
       </section>
 
 
