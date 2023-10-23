@@ -10,6 +10,8 @@ import { Button } from '@/components/ui/button'
 import { Properties } from '../interface/properties'
 import OurServiceCard from '@/components/card/OurServiceCard'
 import { BedIcon } from 'lucide-react'
+import NeighborhoodProperties from '@/components/card/NeighborhoodProperties'
+import ExpertList from '@/components/card/ExpertList'
 
 export default function Home() {
   return (
@@ -234,7 +236,7 @@ export default function Home() {
 
       </section>
 
-      <section className='our-services bg-light-2 bg-opacity-30 py-28 px-6'>
+      <section className='our-services bg-light-2 bg-opacity-30 pt-28 py-20 px-6'>
         <div>
           <h1 className='text-dark-2 text-center text-base tracking-widest'>OUR SERVICES</h1>
           <h3 className='text-dark-1 text-center text-heading3-semibold leading-normal mt-5' >Donec porttitor euismod dignissim</h3>
@@ -260,6 +262,89 @@ export default function Home() {
           />
 
         </div>
+      </section>
+
+      <section className='areas py-28 px-6'>
+        <div>
+          <h1 className='text-secondary-500 text-base tracking-widest'>AREAS ACROSS THE TOWN</h1>
+          <h3 className='text-dark-2 text-heading3-medium leading-normal mt-5' >Neighborhood Properties</h3>
+        </div>
+
+        <div className='grid grid-cols-2 gap-x-5 gap-y-5 mt-5'>
+          <NeighborhoodProperties
+            imgUrl='/images/areas/imagen01.jpg'
+            price='216'
+            cityName='New York City, NY'
+
+          />
+
+          <NeighborhoodProperties
+            imgUrl='/images/areas/imagen02.jpg'
+            price='141'
+            cityName='Houston, TX'
+          />
+
+          <NeighborhoodProperties
+            imgUrl='/images/areas/imagen03.jpg'
+            price='212'
+            cityName='San Diego, CA'
+          />
+
+          <NeighborhoodProperties
+            imgUrl='/images/areas/imagen04.jpg'
+            price='183'
+            cityName='Philadelphia, PA'
+          />
+
+          <NeighborhoodProperties
+            imgUrl='/images/areas/imagen05.jpg'
+            price='112'
+            cityName='San Francisco, CA'
+          />
+
+        </div>
+
+      </section>
+
+      <section className='introduce-yourself pb-6 px-6'>
+        <div>
+          <h1 className='text-secondary-500 text-base tracking-widest text-center font-semibold'>INTRODUCE YOURSELF TO</h1>
+          <h3 className='text-dark-2 text-heading3-medium leading-normal text-center mt-2' >Our Team of Experts</h3>
+        </div>
+
+        <div className='grid grid-cols-2 gap-y-5 mt-5'>
+          <ExpertList
+            imgUrl='/images/expert/expert01.jpg'
+            name='Brendon M'
+            profession='CEO & Founder'
+
+          />
+
+          <ExpertList
+            imgUrl='/images/expert/expert02.jpg'
+            name='Jodi J. Appleby'
+            profession='Real Estate Developer'
+
+          />
+
+          <ExpertList
+            imgUrl='/images/expert/expert03.jpg'
+            name='Justin S. Meza'
+            profession='Listing Agent'
+
+          />
+
+          <ExpertList
+            imgUrl='/images/expert/expert04.jpg'
+            name='Susan T. Smith'
+            profession="Buyer's Agent"
+
+          />
+
+
+
+        </div>
+
       </section>
 
 
