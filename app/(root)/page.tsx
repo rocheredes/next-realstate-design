@@ -12,6 +12,7 @@ import OurServiceCard from '@/components/card/OurServiceCard'
 import { BedIcon } from 'lucide-react'
 import NeighborhoodProperties from '@/components/card/NeighborhoodProperties'
 import ExpertList from '@/components/card/ExpertList'
+import Treding from '@/components/card/Treding'
 
 export default function Home() {
   return (
@@ -306,7 +307,7 @@ export default function Home() {
 
       </section>
 
-      <section className='introduce-yourself pb-6 px-6'>
+      <section className='introduce-yourself pb-24 px-6'>
         <div>
           <h1 className='text-secondary-500 text-base tracking-widest text-center font-semibold'>INTRODUCE YOURSELF TO</h1>
           <h3 className='text-dark-2 text-heading3-medium leading-normal text-center mt-2' >Our Team of Experts</h3>
@@ -340,10 +341,45 @@ export default function Home() {
             profession="Buyer's Agent"
 
           />
+        </div>
 
+      </section>
 
+      <section className='trending py-28 pb-6 px-6 bg-primary-500'>
+        <div>
+          <h1 className='text-white text-base tracking-widest text-center font-semibold'>WHAT’S TRENDING</h1>
+          <h3 className='text-white text-heading3-medium leading-normal text-center mt-2' >Latest Blogs & Posts</h3>
+        </div>
+
+        <div className='flex flex-col gap-5 mt-10'>
+          <Treding
+            imgUrl='/images/trending/trending01.jpg'
+            title='Top 10 Home Buying Mistakes to Avoid'
+            description='Etiam eget elementum elit. Aenean dignissim dapibus vestibulum'
+            date='28 Tue'
+
+          />
+
+          <Treding
+            imgUrl='/images/trending/trending02.jpg'
+            title='How to Stage Your Home for a Quick Sale'
+            description='Nullam odio lacus, dictum quis pretium congue, vehicula venenatis nunc.'
+            date='08 Mon'
+
+          />
+
+          <Treding
+            imgUrl='/images/trending/trending03.jpg'
+            title='5 Tips for First-Time Home Sellers'
+            description='In hac habitasse platea dictumst. Phasellus vel velit vel augue maximus.'
+            date='26 Wed'
+
+          />
 
         </div>
+
+        <Button variant='outline' className='my-10 py-5 px-8 text-buttons-text text-primary-500 rounded-full hover:text-primary-500'>View more blogs</Button>
+
 
       </section>
 
