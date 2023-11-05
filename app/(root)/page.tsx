@@ -3,23 +3,25 @@ import CompanyCarrousel from '@/components/sliders/CompanyCarrousel'
 import MainSlider from '@/components/sliders/MainSlider'
 import Image from 'next/image'
 import { Avatar, AvatarImage } from '@/components/ui/avatar'
-import { categories, properties, userGroupsImages } from '../../constant'
-import { PlusIcon, MagnifyingGlassIcon, HomeIcon } from '@heroicons/react/24/outline'
+import { categories, properties, testimonials, userGroupsImages } from '../../constant'
+import { PlusIcon, MagnifyingGlassIcon, HomeIcon, PhoneIcon, EnvelopeIcon, ArrowSmallRightIcon } from '@heroicons/react/24/outline'
 import ListedProperties from '@/components/card/ListedProperties'
 import { Button } from '@/components/ui/button'
-import { Properties } from '../interface/properties'
 import OurServiceCard from '@/components/card/OurServiceCard'
 import { BedIcon } from 'lucide-react'
 import NeighborhoodProperties from '@/components/card/NeighborhoodProperties'
 import ExpertList from '@/components/card/ExpertList'
 import Treding from '@/components/card/Treding'
 
+import TestimonialSlider from '@/components/sliders/TestimonialSlider'
+import { Input } from '@/components/ui/input'
+
+
 export default function Home() {
   return (
     <>
 
-      {/* from #4CC9F0, 
-    to #4361EE */}
+
       <section className='rounded-b-[50rem]'
         style={{
           background: 'linear-gradient(180deg, rgba(76, 201, 240, 0.00) 0%, rgba(67, 97, 238, 0.30) 100%)'
@@ -55,7 +57,7 @@ export default function Home() {
         </div>
 
         <div className='mt-8'>
-          {/* Todo: Make a Company carosell */}
+
           <CompanyCarrousel />
         </div>
 
@@ -383,6 +385,100 @@ export default function Home() {
 
       </section>
 
+      <section className='testimonials py-28 pb-6 px-6'>
+        <div>
+          <h1 className='text-secondary-500 text-base tracking-widest  font-semibold'>TESTIMONIALS </h1>
+          <h3 className='text-dark-2 text-heading3-medium leading-normal mt-2' >Look What Our Customers Say!</h3>
+          <p className='text-small-text text-dark-2 mt-6'> Fusce venenatis tellus a felis scelerisque, non pulvinar est pellentesque.</p>
+        </div>
+
+        <div>
+          <TestimonialSlider
+            testimonials={testimonials}
+          />
+        </div>
+
+
+        <div className='become-agent mt-10 bg-primary-500 rounded-[1.25rem] px-8 pt-24'>
+          <div>
+            <h1 className='text-white text-heading3-semibold'>Become a Agent.</h1>
+            <p className='text-white text-small-text leading-normal mt-5' >Fusce venenatis tellus a felis scelerisque. venenatis tellus a felis scelerisque.</p>
+
+            <Button type='button'
+              variant='default'
+              className='mt-10 p-7 text-buttons-text bg-white hover:bg-white text-primary-500 rounded-full'
+            >
+              Register Now
+            </Button>
+          </div>
+
+          <div className='relative w-64 h-64 overflow-hidden'>
+
+            <Image
+
+              width={320}
+              height={320}
+              src={'/images/users/user8.png'}
+              className='!w-80 !h-80 object-cover'
+              alt='user'
+            />
+          </div>
+
+
+        </div>
+
+
+
+
+
+
+      </section >
+
+      <footer className='bg-secondary-500/10 py-14'>
+        <div className='px-20'>
+          <div className='flex items-center justify-center indent-3'>
+            <div className='flex justify-center items-center bg-primary-500 rounded-full w-[50px] h-[50px]'>
+              <HomeIcon className='w-6 h-6 text-white' />
+            </div>
+            <p className='text-dark-2 text-heading4-semibold max-xs:hidden'>
+              Rezilla
+            </p>
+          </div>
+
+          <p className='address text-buttons-text text-center leading-normal text-dark-3 mt-8'>
+            2728 Hickory StreetSalt Lake City, UT 84104
+          </p>
+
+          <p className='phone flex justify-center items-center text-buttons-text text-center leading-normal text-dark-3 mt-8'>
+            <PhoneIcon className='w-4 h-4 mr-3' />
+            +1 206-214-2298
+          </p>
+
+          <p className='email flex justify-center items-center text-buttons-text text-center leading-normal text-dark-3 mt-8'>
+            <EnvelopeIcon className='w-4 h-4 mr-3' />
+            support@rezilla.com
+          </p>
+        </div>
+        <div className='subscribe flex flex-col justify-center items-center mt-8'>
+          <p className='text-buttons-text text-center leading-normal text-dark-1 px-20'>
+            Subscribe to our Newsletter!
+          </p>
+
+          <div className='flex items-center gap-1 bg-white rounded-full overflow-hidden p-1 mt-2'>
+            <Input
+            placeholder='Email Address' 
+            className='flex-1 no-focus placeholder:text-light-1 placeholder:text-regular-text !text-light-1 text-regular-text border-none' 
+            
+            />
+            <button className='flex justify-center items-center w-14 h-14 bg-primary-500 hover:bg-primary-500 rounded-full text-white'>
+              <ArrowSmallRightIcon className='w-6 h-6' />
+            </button>
+
+          </div>
+
+        </div>
+
+      </footer>
 
     </>
   )
