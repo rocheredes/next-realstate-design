@@ -85,3 +85,36 @@ export const properties = [
 
 ]
 
+export const testimonials = [
+    {
+        description: "I highly recommend Jodi J. Appleby. She was attentive to our needs and worked tirelessly to find us the perfect home. We couldn't be happier with our new place!",
+        rating: 4,
+        user: {
+            imgUrl: '/images/users/user7.jpg',
+            name: 'Barbara D. Smith'
+        }
+
+    },
+
+    {
+        description: "In hac habitasse platea dictumst. Phasellus vel velit vel augue maximus.",
+        rating: 5,
+        user: {
+            imgUrl: '/images/users/user2.jpg',
+            name: 'Samantha Ferrer'
+        }
+
+    },
+
+    {
+        description: "Nullam odio lacus, dictum quis pretium congue, vehicula venenatis nunc.",
+        rating: 3,
+        user: {
+            imgUrl: '/images/users/user5.jpg',
+            name: 'Samantha Ferrer'
+        }
+
+    }
+
+]
+
