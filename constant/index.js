@@ -1,3 +1,12 @@
+export const navLinks = [
+    { name: "Home", link: "/home" },
+    { name: "About", link: "/about" },
+    { name: "Listings", link: "/listings" },
+    { name: "Services", link: "/services" },
+    { name: "Blogs", link: "/blogs" },
+]
+
+
 export const companyImages = [
     { url: '/images/google02.png', alt: 'google' },
     { url: '/images/amazon02.png', alt: 'amazon' },

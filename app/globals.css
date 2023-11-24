@@ -4,7 +4,7 @@
 
 @layer components {
     .topbar {
-        @apply flex w-full items-center justify-between px-6 py-3;
+        @apply flex w-full items-center justify-between px-6 py-3 lg:px-24;
     }
 
     .main-swipper-arrow {

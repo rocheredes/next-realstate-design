@@ -51,7 +51,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='flex flex-col mt-10 px-6 py-3'>
+      <section className='flex flex-col  mt-10 px-6 py-3'>
         <div>
           <p className='text-dark-3 text-buttons-text text-center px-16 leading-normal'>Trusted by 100+ Companies across the globe! </p>
         </div>
@@ -61,7 +61,7 @@ export default function Home() {
           <CompanyCarrousel />
         </div>
 
-        <div className='users-group  mt-10 '>
+        <div className='users-group sm:flex sm:flex-row sm:gap-7 mt-10 '>
           <div className='users-group_container rounded-full  border-2  '>
             <div className='flex justify-start -space-x-1.5'>
               {
@@ -120,8 +120,8 @@ export default function Home() {
 
           </div>
 
-          <div className='images flex gap-4 mt-16 '>
-            <div className='relative w-44 h-64 rounded-2xl overflow-hidden'>
+          <div className='images flex gap-4 mt-16 justify-center'>
+            <div className='relative w-44 h-64 sm:w-72 sm:h-[31rem] sm:h rounded-2xl overflow-hidden'>
               <Image
                 fill
                 src='/images/3c1780f6158b1d62f2036152ec7a594f.jpg'
@@ -131,7 +131,7 @@ export default function Home() {
               />
             </div>
             <div className='flex flex-col gap-4 -mt-8'>
-              <div className='relative w-36 h-36 rounded-2xl overflow-hidden'>
+              <div className='relative w-36 h-36 sm:w-72 sm:h-72 rounded-2xl overflow-hidden'>
                 <Image
                   fill
                   src='/images/8d9d904d15616c6b35ab1d67adea9e75.jpg'
@@ -141,7 +141,7 @@ export default function Home() {
                 />
               </div>
 
-              <div className='relative w-36 h-24 rounded-2xl overflow-hidden'>
+              <div className='relative w-36 h-24 sm:w-72 sm:h-72 rounded-2xl overflow-hidden'>
                 <Image
                   fill
                   src='/images/8363fc4f62fd9a46cc28eb202059adff.jpg'
@@ -154,8 +154,8 @@ export default function Home() {
           </div>
 
 
-          <div className='infoicons mt-10'>
-            <div className='infoicons_container  p-7 shadow-md rounded-3xl'>
+          <div className='infoicons sm:flex sm:gap-2 mt-10'>
+            <div className='infoicons_container p-7 shadow-md rounded-3xl'>
               <Image
                 src='/images/who-we-are/icon_smart_home_.svg'
                 width={34}
@@ -170,7 +170,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className='infoicons_container p-7 mt-10 shadow-md rounded-3xl'>
+            <div className='infoicons_container p-7 mt-10 sm:mt-0 shadow-md rounded-3xl'>
               <Image
                 src='/images/who-we-are/icon_user_octagon_.svg'
                 width={34}
@@ -234,8 +234,6 @@ export default function Home() {
           </div>
 
         </div>
-
-
 
       </section>
 

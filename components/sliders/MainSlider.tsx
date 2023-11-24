@@ -33,6 +33,20 @@ const MainSlider = () => {
                 navigation={navigation}
                 pagination={pagination}
                 modules={[Pagination, Navigation]}
+                breakpoints={{
+                    640: {
+                      slidesPerView: 2,
+                      spaceBetween: 20,
+                    },
+                    768: {
+                      slidesPerView: 4,
+                      spaceBetween: 40,
+                    },
+                    1024: {
+                      slidesPerView: 5,
+                      spaceBetween: 50,
+                    },
+                  }}
             >
                 <SwiperSlide>
                     <div className='relative h-48 w-full rounded-3xl overflow-hidden'>
