@@ -12,8 +12,8 @@ const OurServiceCard = ({ title, description, icon }: Props) => {
             <div className='flex justify-center items-center w-16 h-16 rounded-full bg-secondary-500 '>
                 {icon}
             </div>
-            <h5 className='text-dark-2 text-base'>Buy a New Home</h5>
-            <p className='text-dark-3 text-small-text'>Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. </p>
+            <h5 className='text-dark-2 text-base'>{title}</h5>
+            <p className='text-dark-3 text-small-text'>{description} </p>
         </div>
     )
 }

@@ -13,7 +13,7 @@ const NeighborhoodProperties = ({
     cityName
 }: Props) => {
     return (
-        <div className='relative w-full h-40 rounded-3xl overflow-hidden'>
+        <div className='relative w-full h-40 md:h-64 rounded-3xl overflow-hidden'>
             <Image
                 fill
                 src={imgUrl}

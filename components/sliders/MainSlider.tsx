@@ -39,7 +39,7 @@ const MainSlider = () => {
                       spaceBetween: 20,
                     },
                     768: {
-                      slidesPerView: 4,
+                      slidesPerView: 3,
                       spaceBetween: 40,
                     },
                     1024: {
@@ -72,7 +72,7 @@ const MainSlider = () => {
                     <div className='relative h-48 w-full rounded-3xl overflow-hidden'>
                         <Image
                             fill
-                            src='/images/8363fc4f62fd9a46cc28eb202059adff.jpg'
+                            src='/images/8d9d904d15616c6b35ab1d67adea9e75.jpg'
                             alt='House Image'
                             className='object-cover'
                         />

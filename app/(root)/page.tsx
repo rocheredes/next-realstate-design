@@ -15,6 +15,7 @@ import Treding from '@/components/card/Treding'
 
 import TestimonialSlider from '@/components/sliders/TestimonialSlider'
 import { Input } from '@/components/ui/input'
+import Link from 'next/link'
 
 
 export default function Home() {
@@ -210,23 +211,26 @@ export default function Home() {
               }
             </div>
 
-            {
-              properties.map((prope) => (
-                <ListedProperties
-                  key={prope.url}
-                  url={prope.url}
-                  category={prope.category}
-                  price={prope.price}
-                  title={prope.title}
-                  description={prope.description}
-                  beds={prope.beds}
-                  baths={prope.baths}
-                  iconCategory={prope.iconCategory}
-                  iconColorText={prope.iconColorText}
-                  iconColorBg={prope.iconColorBg}
-                />
-              ))
-            }
+            <div className='grid md:grid-cols-2 md:gap-8'>
+              {
+                properties.map((prope) => (
+                  <ListedProperties
+                    key={prope.url}
+                    url={prope.url}
+                    category={prope.category}
+                    price={prope.price}
+                    title={prope.title}
+                    description={prope.description}
+                    beds={prope.beds}
+                    baths={prope.baths}
+                    iconCategory={prope.iconCategory}
+                    iconColorText={prope.iconColorText}
+                    iconColorBg={prope.iconColorBg}
+                  />
+                ))
+              }
+            </div>
+
 
             <div className='flex justify-center mt-14'>
               <Button variant={'outline'} className=' text-primary-500 hover:text-primary-500 border-primary-500 rounded-full py-5 px-7' > View more properties </Button>
@@ -243,7 +247,7 @@ export default function Home() {
           <h3 className='text-dark-1 text-center text-heading3-semibold leading-normal mt-5' >Donec porttitor euismod dignissim</h3>
         </div>
 
-        <div className='mt-10'>
+        <div className='mt-10 grid md:grid-cols-3 md:gap-5'>
           <OurServiceCard
             title="Buy a New Home"
             description='Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. '
@@ -257,7 +261,7 @@ export default function Home() {
           />
 
           <OurServiceCard
-            title="Buy a New Home"
+            title="Rent a House"
             description='Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. '
             icon={<BedIcon className='w-6 h-6 text-white' />}
           />
@@ -313,7 +317,7 @@ export default function Home() {
           <h3 className='text-dark-2 text-heading3-medium leading-normal text-center mt-2' >Our Team of Experts</h3>
         </div>
 
-        <div className='grid grid-cols-2 gap-y-5 mt-5'>
+        <div className='grid grid-cols-2 md:grid-cols-4 gap-y-5 mt-5'>
           <ExpertList
             imgUrl='/images/expert/expert01.jpg'
             name='Brendon M'
@@ -351,7 +355,7 @@ export default function Home() {
           <h3 className='text-white text-heading3-medium leading-normal text-center mt-2' >Latest Blogs & Posts</h3>
         </div>
 
-        <div className='flex flex-col gap-5 mt-10'>
+        <div className='grid md:grid-cols-2 gap-5 mt-10'>
           <Treding
             imgUrl='/images/trending/trending01.jpg'
             title='Top 10 Home Buying Mistakes to Avoid'
@@ -397,10 +401,13 @@ export default function Home() {
         </div>
 
 
-        <div className='become-agent mt-10 bg-primary-500 rounded-[1.25rem] px-8 pt-24'>
-          <div>
+        <div className='md:flex md:justify-between md:gap-4 become-agent mt-24 bg-primary-500 rounded-[1.25rem] px-8 pt-24'>
+          <div className='order-1 md:order-2 md:flex md:flex-col'>
+
             <h1 className='text-white text-heading3-semibold'>Become a Agent.</h1>
-            <p className='text-white text-small-text leading-normal mt-5' >Fusce venenatis tellus a felis scelerisque. venenatis tellus a felis scelerisque.</p>
+            <p className='text-white text-small-text leading-normal mt-5' >
+              Fusce venenatis tellus a felis scelerisque. venenatis tellus a felis scelerisque.
+            </p>
 
             <Button type='button'
               variant='default'
@@ -410,30 +417,22 @@ export default function Home() {
             </Button>
           </div>
 
-          <div className='relative w-64 h-64 overflow-hidden'>
+          <div className='relative w-64 h-64 overflow-hidden order-2 md:order-1 md:w-full md:-mt-40 md:!h-96'>
 
             <Image
-
               width={320}
               height={320}
               src={'/images/users/user8.png'}
-              className='!w-80 !h-80 object-cover'
+              className='!w-80 !h-80 object-cover md:!h-96'
               alt='user'
             />
           </div>
-
-
         </div>
-
-
-
-
-
-
       </section >
 
-      <footer className='bg-secondary-500/10 py-14'>
-        <div className='px-20'>
+      
+      <footer className='bg-secondary-500/10 py-14 '>
+        <div className='footer-rezilla px-20 md:px-0'>
           <div className='flex items-center justify-center indent-3'>
             <div className='flex justify-center items-center bg-primary-500 rounded-full w-[50px] h-[50px]'>
               <HomeIcon className='w-6 h-6 text-white' />
@@ -457,6 +456,75 @@ export default function Home() {
             support@rezilla.com
           </p>
         </div>
+
+        <div className='hidden quick-links px-20 md:flex-col md:px-0'>
+          <div className='flex flex-col items-center justify-center indent-3'>
+
+            <p className='text-dark-2 text-heading4-semibold max-xs:hidden'>
+              Quick Links
+            </p>
+          </div>
+
+          <Link href="#" className='text-buttons-text text-center leading-normal text-dark-3 mt-8'>
+            Home
+          </Link>
+
+          <Link href="#" className='text-buttons-text text-center leading-normal text-dark-3 mt-8'>
+            About
+          </Link>
+
+          <Link href="#" className='text-buttons-text text-center leading-normal text-dark-3 mt-8'>
+            Listings
+          </Link>
+
+          <Link href="#" className='text-buttons-text text-center leading-normal text-dark-3 mt-8'>
+            Services
+          </Link>
+
+          <Link href="#" className='text-buttons-text text-center leading-normal text-dark-3 mt-8'>
+            Blogs
+          </Link>
+
+          <Link href="#" className='text-buttons-text text-center leading-normal text-dark-3 mt-8'>
+            Become an Agent
+          </Link>
+
+
+
+
+        </div>
+
+        <div className='hidden quick-links px-20 md:flex-col md:px-0'>
+          <div className='flex flex-col items-center justify-center indent-3'>
+
+            <p className='text-dark-2 text-heading4-semibold max-xs:hidden'>
+              Discovery
+            </p>
+          </div>
+
+          <Link href="#" className='text-buttons-text text-center leading-normal text-dark-3 mt-8'>
+            Canada
+          </Link>
+
+          <Link href="#" className='text-buttons-text text-center leading-normal text-dark-3 mt-8'>
+            United States
+          </Link>
+
+          <Link href="#" className='text-buttons-text text-center leading-normal text-dark-3 mt-8'>
+            Germany
+          </Link>
+
+          <Link href="#" className='text-buttons-text text-center leading-normal text-dark-3 mt-8'>
+            Africa
+          </Link>
+
+          <Link href="#" className='text-buttons-text text-center leading-normal text-dark-3 mt-8'>
+            India
+          </Link>
+
+        </div>
+
+
         <div className='subscribe flex flex-col justify-center items-center mt-8'>
           <p className='text-buttons-text text-center leading-normal text-dark-1 px-20'>
             Subscribe to our Newsletter!
@@ -464,9 +532,9 @@ export default function Home() {
 
           <div className='flex items-center gap-1 bg-white rounded-full overflow-hidden p-1 mt-2'>
             <Input
-            placeholder='Email Address' 
-            className='flex-1 no-focus placeholder:text-light-1 placeholder:text-regular-text !text-light-1 text-regular-text border-none' 
-            
+              placeholder='Email Address'
+              className='flex-1 no-focus placeholder:text-light-1 placeholder:text-regular-text !text-light-1 text-regular-text border-none'
+
             />
             <button className='flex justify-center items-center w-14 h-14 bg-primary-500 hover:bg-primary-500 rounded-full text-white'>
               <ArrowSmallRightIcon className='w-6 h-6' />
