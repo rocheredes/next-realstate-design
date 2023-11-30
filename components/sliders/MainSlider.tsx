@@ -30,26 +30,27 @@ const MainSlider = () => {
     return (
         <>
             <Swiper
+                className='mt-5'
                 navigation={navigation}
                 pagination={pagination}
                 modules={[Pagination, Navigation]}
                 breakpoints={{
                     640: {
-                      slidesPerView: 2,
-                      spaceBetween: 20,
+                        slidesPerView: 2,
+                        spaceBetween: 20,
                     },
                     768: {
-                      slidesPerView: 3,
-                      spaceBetween: 40,
+                        slidesPerView: 3,
+                        spaceBetween: 40,
                     },
                     1024: {
-                      slidesPerView: 5,
-                      spaceBetween: 50,
+                        slidesPerView: 1,
+                        spaceBetween: 50,
                     },
-                  }}
+                }}
             >
                 <SwiperSlide>
-                    <div className='relative h-48 w-full rounded-3xl overflow-hidden'>
+                    <div className='relative h-48 w-full rounded-3xl overflow-hidden lg:h-80'>
                         <Image
                             fill
                             src='/images/c0db865f789961bb3e28500f19c35c4e.jpg'
@@ -59,7 +60,7 @@ const MainSlider = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='relative h-48 w-full rounded-3xl overflow-hidden'>
+                    <div className='relative h-48 w-full rounded-3xl overflow-hidden lg:h-80'>
                         <Image
                             fill
                             src='/images/8363fc4f62fd9a46cc28eb202059adff.jpg'
@@ -69,7 +70,7 @@ const MainSlider = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='relative h-48 w-full rounded-3xl overflow-hidden'>
+                    <div className='relative h-48 w-full rounded-3xl overflow-hidden lg:h-80'>
                         <Image
                             fill
                             src='/images/8d9d904d15616c6b35ab1d67adea9e75.jpg'
@@ -80,7 +81,7 @@ const MainSlider = () => {
 
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='relative h-48 w-full rounded-3xl overflow-hidden'>
+                    <div className='relative h-48 w-full rounded-3xl overflow-hidden lg:h-80'>
                         <Image
                             fill
                             src='/images/3c1780f6158b1d62f2036152ec7a594f.jpg'

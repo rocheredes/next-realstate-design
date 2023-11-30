@@ -16,7 +16,7 @@
     }
 
     .infoicons_container {
-        @apply flex justify-between items-center gap-3 bg-white
+        @apply flex justify-start items-center gap-3 bg-white
     }
     .list-properties_categories {
         @apply absolute flex items-center gap-2 bottom-4 left-4

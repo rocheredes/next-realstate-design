@@ -34,7 +34,7 @@ const Navbar = () => {
                 <Bars3Icon className='w-6 h-6 text-dark-1' />
             </div>
 
-            <div className='hidden lg:flex gap-1'>
+            <div className='hidden lg:flex gap-1 space-x-2'>
                 <div className='flex items-center gap-1'>
                     <UserCircleIcon className='w-5 h-5' />
                     <div className='text-buttons-text'>
@@ -44,9 +44,9 @@ const Navbar = () => {
 
                 <Link
                     href={'/listings'}
-                    className='!flex bg-primary-500 text-white text-buttons-text'>
-                    <HomeIcon className='w-5 h-5'></HomeIcon>
-                    Add Listings
+                    className='!flex space-x-1 items-center bg-primary-500 text-white text-buttons-text rounded-full py-4 px-6'>
+                    <HomeIcon className='-mt-1 w-5 h-5'></HomeIcon>
+                    <span>Add Listings </span>
                 </Link>
 
 

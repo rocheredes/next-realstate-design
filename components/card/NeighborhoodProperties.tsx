@@ -4,16 +4,18 @@ import React from 'react'
 interface Props {
     imgUrl: string,
     price: string,
-    cityName: string
+    cityName: string,
+    containerClass?:string
 }
 
 const NeighborhoodProperties = ({
     imgUrl,
     price,
-    cityName
+    cityName,
+    containerClass
 }: Props) => {
     return (
-        <div className='relative w-full h-40 md:h-64 rounded-3xl overflow-hidden'>
+        <div className={`relative w-full h-40 md:h-64 rounded-3xl overflow-hidden ${containerClass}`}>
             <Image
                 fill
                 src={imgUrl}
