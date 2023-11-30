@@ -8,6 +8,17 @@
     background-color: #4361EE;
 }
 
+
+.swiper-pagination-bullet.testimonials{
+    width: auto;
+    opacity: 1;
+    background-color: #aaa;
+}
+
+.swiper-pagination-bullet-active.testimonials {
+    background-color: #2B2B2B;
+}
+
 .swipper-arrows-next,
 .swipper-arrows-prev {
     position: absolute;

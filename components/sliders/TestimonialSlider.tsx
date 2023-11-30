@@ -20,36 +20,34 @@ interface TestimonialProps {
 }
 
 interface Props {
-    testimonials: TestimonialProps[]
+    testimonials: TestimonialProps[],
+    setSwiper: Function
 }
 
-const TestimonialSlider = ({ testimonials }: Props) => {
-
-    console.log("SSSSSS", testimonials)
+const TestimonialSlider = ({ testimonials, setSwiper }: Props) => {
 
     const pagination = {
         el: '.pagination',
         clickable: true,
         renderBullet: function (index: number, className: string) {
             return (
-                '<div class="' + className + ' !flex-1 !h-1 !rounded-lg cursor-pointer">' + '' + '</div>'
+                '<div class="' + className + ' testimonials !flex-1 !h-1 !rounded-lg cursor-pointer">' + '' + '</div>'
             )
         },
     };
 
-
-
     return (
 
         <Swiper
-
             pagination={pagination}
             modules={[Pagination]}
+            onSwiper={(swiper) => setSwiper(swiper)}
+            loop={true}
         >
             {
                 testimonials.map(({ description, rating, user }, index) => (
                     <SwiperSlide key={index}>
-                        <div className='flex flex-col gap-5 mt-10 py-8 px-6 rounded-3xl shadow-sm'>
+                        <div className='flex flex-col gap-5 mt-10 py-8 px-6 rounded-3xl shadow-sm md:mt-0'>
                             <blockquote className="text-xl italic font-semibold text-gray-900 dark:text-white">
                                 <BlockquoteIcon classContainer='w-10 h-9' />
                                 <p className='mt-3 text-buttons-text not-italic leading-relaxed'>{description}</p>

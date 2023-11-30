@@ -1,3 +1,4 @@
+'use client'
 import SearchForm from '@/components/forms/SearchForm'
 import CompanyCarrousel from '@/components/sliders/CompanyCarrousel'
 import MainSlider from '@/components/sliders/MainSlider'
@@ -8,7 +9,7 @@ import { PlusIcon, MagnifyingGlassIcon, HomeIcon, PhoneIcon, EnvelopeIcon, Arrow
 import ListedProperties from '@/components/card/ListedProperties'
 import { Button } from '@/components/ui/button'
 import OurServiceCard from '@/components/card/OurServiceCard'
-import { BedIcon, Facebook, LucideFacebook } from 'lucide-react'
+import { ArrowLeftCircleIcon, ArrowRightCircleIcon, BedIcon, Facebook, LucideFacebook } from 'lucide-react'
 import NeighborhoodProperties from '@/components/card/NeighborhoodProperties'
 import ExpertList from '@/components/card/ExpertList'
 import Treding from '@/components/card/Treding'
@@ -19,9 +20,12 @@ import Link from 'next/link'
 import FacebookIcon from '@/components/icons/FacebookIcon'
 import LinkedinIcon from '@/components/icons/LinkedinIcon'
 import InstagramIcon from '@/components/icons/InstagramIcon'
+import { useState } from 'react'
 
 
 export default function Home() {
+  const [swiper, setSwiper] = useState<any>({})
+  
   return (
     <>
 
@@ -401,20 +405,38 @@ export default function Home() {
 
       </section>
 
-      <section className='testimonials py-28 pb-6 px-6 xl:mx-40'>
+      <section className='testimonials py-28 pb-6 px-6 md:grid md:grid-cols-2 md:gap-x-5 xl:mx-40'>
         <div>
           <h1 className='text-secondary-500 text-base tracking-widest  font-semibold'>TESTIMONIALS </h1>
           <h3 className='text-dark-2 text-heading3-medium leading-normal mt-2' >Look What Our Customers Say!</h3>
           <p className='text-small-text text-dark-2 mt-6'> Fusce venenatis tellus a felis scelerisque, non pulvinar est pellentesque.</p>
+
+          <div className='hidden md:flex gap-3 mt-16'>
+            <ArrowLeftCircleIcon 
+            className='w-14 h-14 stroke-secondary-500 stroke-[0.5] cursor-pointer'
+            onClick={()=>swiper.slidePrev()}
+            />
+            <ArrowRightCircleIcon  className='w-14 h-14 stroke-secondary-500 stroke-[0.5] cursor-pointer'
+             onClick={()=>swiper.slideNext()}
+            />
+          </div>
+
         </div>
+
+
 
         <div>
           <TestimonialSlider
             testimonials={testimonials}
+            setSwiper={setSwiper}
           />
         </div>
 
 
+
+      </section >
+
+      <section className='become-agent  pb-28 px-6 xl:mx-40'>
         <div className='md:flex md:justify-start md:gap-4 become-agent mt-24 bg-primary-500 rounded-[1.25rem] px-8 pt-24 xl:pt-0'>
           <div className='order-1 md:order-2 md:flex md:flex-col xl:flex xl:flex-row xl:items-center'>
 
@@ -443,7 +465,7 @@ export default function Home() {
             />
           </div>
         </div>
-      </section >
+      </section>
 
 
       <footer className='bg-secondary-500/10 py-14 xl:px-64 xl:grid xl:grid-cols-4 xl:gap-x-10'>
@@ -553,13 +575,13 @@ export default function Home() {
 
           <div className='flex space-x-3 mt-3 '>
             <Link href='#'>
-                <FacebookIcon classContainer='w-6 h-6 text-primary-500' />
+              <FacebookIcon classContainer='w-6 h-6 text-primary-500' />
             </Link>
             <Link href='#'>
-                <LinkedinIcon classContainer='w-6 h-6 text-primary-500' />
+              <LinkedinIcon classContainer='w-6 h-6 text-primary-500' />
             </Link>
             <Link href='#'>
-                <InstagramIcon classContainer='w-6 h-6 text-primary-500' />
+              <InstagramIcon classContainer='w-6 h-6 text-primary-500' />
             </Link>
           </div>
 
