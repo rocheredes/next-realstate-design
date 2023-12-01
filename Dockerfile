@@ -1,7 +1,7 @@
 # Dockerfile for Next.js 13
 	 
 # Set the base image
-FROM node:13.14.0-alpine
+FROM node:18-alpine
 	 
 # Set the working directory
 WORKDIR /app
