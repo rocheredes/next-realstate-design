@@ -6,7 +6,7 @@ import InfoNavbar from '@/components/shared/InfoNavbar'
 
 const poppins = Poppins({
   subsets: ['latin'],
-  weight: "900",
+  weight: "400",
 })
 
 export const metadata: Metadata = {
