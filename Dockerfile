@@ -26,8 +26,6 @@ COPY . .
 #COPY .env.production.sample .env.production
 RUN yarn build
 
-EXPOSE 3000
-
 # 3. Production image, copy all the files and run next
 FROM base AS runner
 WORKDIR /app
